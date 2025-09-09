@@ -50,7 +50,7 @@ const HomePage = () => {
 
   const background = useTransform(scrollY, [0, 400], ["#ffffff", "#afadad"]);
 
-  console.table(projects);
+  // console.table(projects);
   return (
     <motion.div
     style={{background}}

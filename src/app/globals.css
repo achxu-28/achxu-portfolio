@@ -1,35 +1,4 @@
-@font-face {
-  font-family: Poppins-SemiBold;
-  src: url("../assets/fonts/Poppins-SemiBold.ttf");
-}
-@font-face {
-  font-family: Poppins-Regular;
-  src: url("../assets/fonts/Poppins-Regular.ttf");
-}
-@font-face {
-  font-family: Poppins-Light;
-  src: url("../assets/fonts/Poppins-Light.ttf");
-}
-@font-face {
-  font-family: Poppins-Bold;
-  src: url("../assets/fonts/Poppins-Bold.ttf");
-}
-@font-face {
-  font-family: Doto;
-  src: url("../assets/fonts/Doto-Regular.ttf");
-}
-@font-face {
-  font-family: Raleway-ExtraLight;
-  src: url("../assets/fonts/Raleway-ExtraLight.ttf");
-}
-@font-face {
-  font-family: Raleway-SemiBold;
-  src: url("../assets/fonts/Raleway-SemiBold.ttf");
-}
-@font-face {
-  font-family: Raleway;
-  src: url("../assets/fonts/Raleway-Regular.ttf");
-}
+
 @font-face {
   font-family: Inter;
   src: url("../assets/fonts/Inter_28pt-Regular.ttf");
@@ -55,15 +24,6 @@
   --breakpoint-xl: 1500px;
   --color-twitter-blue: #1DA1F2;
 
-  --font-doto: Doto, sans-serif;
-  --font-raleway-semibold: Raleway-SemiBold, sans-serif;
-  --font-raleway-light: Raleway-ExtraLight, sans-serif;
-  --font-raleway: Raleway, sans-serif;
-
-  --font-poppins-semi-bold: Poppins-SemiBold, sans-serif;
-  --font-poppins-regular: Poppins-Regular, sans-serif;
-  --font-poppins-light: Poppins-Light, sans-serif;
-  --font-poppins-bold: Poppins-Bold, sans-serif;
 
   --font-inter: Inter, sans-serif;
   --font-inter-semibold: Inter-semibold, sans-serif;
