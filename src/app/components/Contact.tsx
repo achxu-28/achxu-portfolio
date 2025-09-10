@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import  {motion, useScroll, useTransform} from "motion/react"; 
+import Link from 'next/link';
 
 
 const Contact = () => {
@@ -16,14 +17,14 @@ const Contact = () => {
                 <h3 className='font-inter-semibold lg:text-[20px]'>{'[CONTACT]'}</h3>
             </div>
             <div className='flex flex-col pr-20'>
-                <p>EMAIL</p>
-                <p>WHATSAPP</p>
+                <Link href={'mailto:akashmamenholy@gmail.com'}>EMAIL</Link>
+                <Link href={'https://wa.me/8301917778'}>WHATSAPP</Link>
             </div>
             <div className='flex flex-col pr-20'>
-                <p>INSTAGRAM</p>
-                <p>LINKEDIN</p>
-                <p>GITHUB</p>
-                <p>RESUME</p>
+                <Link href={'https://www.instagram.com/achxu_/'}>INSTAGRAM</Link>
+                <Link href={'https://www.linkedin.com/in/akash-mamenholy-275b37353'}>LINKEDIN</Link>
+                <Link href={'https://github.com/achxu-28'}>GITHUB</Link>
+                <Link href={'https://drive.google.com/file/d/1oz2abTUjmLYSN9YLkFs4gUh5YilS2sF-/view?usp=drive_link'}>RESUME</Link>
             </div>
           </div>
     

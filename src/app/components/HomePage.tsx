@@ -92,14 +92,16 @@ const HomePage = () => {
               <div className="text-gray-500 italic">
                 *wanna discuss your project?
               </div>
-              <div className="flex  gap-[2px] text-[20px]">
-                <button className="text-gray-100  bg-gray-950 pl-2 pr-6 py-2">
-                  connect with me
-                </button>
-                <button className="text-gray-100  bg-gray-950 pl-3 pr-3 py-2">
-                  {"->"}
-                </button>
-              </div>
+
+                <Link href={"mailto:akashmamenholy@gmail.com"} className="flex  gap-[2px] text-[20px]">
+                  <button className="text-gray-100  bg-gray-950 pl-2 pr-6 py-2">
+                    connect with me
+                  </button>
+                  <button className="text-gray-100  bg-gray-950 pl-3 pr-3 py-2">
+                    {"->"}
+                  </button>
+                </Link>
+
             </div>
           </div>
         </div>

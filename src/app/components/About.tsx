@@ -58,16 +58,16 @@ const About = () => {
                   </p>
                 </motion.div>
                 <div className="flex gap-3 text-gray-500">
-                  <Link href={'/'} className="border-1 p-2 rounded-full h-15 w-15 flex justify-center items-center hover:bg-[#afadad80] transition-all duration-200">
+                  <Link href={'https://www.instagram.com/achxu_/'} className="border-1 p-2 rounded-full h-15 w-15 flex justify-center items-center hover:bg-[#afadad80] transition-all duration-200">
                     <Insta className="size-10 hover:scale-105 transition-all duration-200"/>
                   </Link>
-                  <Link href={'/'} className="border-1 p-2 rounded-full h-15 w-15 flex justify-center items-center hover:bg-[#afadad80] transition-all duration-200">
+                  <Link href={'https://www.linkedin.com/in/akash-mamenholy-275b37353'} className="border-1 p-2 rounded-full h-15 w-15 flex justify-center items-center hover:bg-[#afadad80] transition-all duration-200">
                     <LinkedIn className="size-15 hover:scale-105 transition-all duration-200"/>
                   </Link>
-                  <Link href={'/'} className="border-1 p-2 rounded-full h-15 w-15 flex justify-center items-center hover:bg-[#afadad80] transition-all duration-200">
+                  <Link href={'https://github.com/achxu-28'} className="border-1 p-2 rounded-full h-15 w-15 flex justify-center items-center hover:bg-[#afadad80] transition-all duration-200">
                     <GitIcon className="size-15 hover:scale-105 transition-all duration-200"/>
                   </Link>
-                  <Link href={'/'} className="border-1 p-2 rounded-full h-15 w-15 flex justify-center items-center hover:bg-[#afadad80] transition-all duration-200">
+                  <Link href={'https://drive.google.com/file/d/1oz2abTUjmLYSN9YLkFs4gUh5YilS2sF-/view?usp=drive_link'} className="border-1 p-2 rounded-full h-15 w-15 flex justify-center items-center hover:bg-[#afadad80] transition-all duration-200">
                     <Resume className="size-15 hover:scale-105 transition-all duration-200"/>
                   </Link>
                 </div>
@@ -93,12 +93,14 @@ const About = () => {
                 </motion.div>
         
                  <div className="flex  gap-[2px] text-[20px]">
-                        <button className="text-gray-100  bg-gray-950 pl-2 pr-6 py-2">
-                          connect with me
-                        </button>
-                        <button className="text-gray-100  bg-gray-950 pl-3 pr-3 py-2">
-                          {"->"}
-                        </button>
+                        <Link href={"mailto:akashmamenholy@gmail.com"} className=" flex  gap-[2px]">
+                          <button className="text-gray-100  bg-gray-950 pl-2 pr-6 py-2">
+                            connect with me
+                          </button>
+                          <button className="text-gray-100  bg-gray-950 pl-3 pr-3 py-2">
+                            {"->"}
+                          </button>
+                        </Link>
                 </div>
             </div>
         </div>

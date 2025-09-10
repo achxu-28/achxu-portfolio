@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Header = () => {
@@ -26,8 +27,8 @@ const Header = () => {
               </div>
 
               <div className="flex flex-col gap-2 text-[18px]  text-gray-500  ">
-                <p className="hover:text-violet-600 underline">get my resume here</p>
-                <p className="hover:text-violet-600 underline">Github</p>
+                <Link href={'https://drive.google.com/file/d/1oz2abTUjmLYSN9YLkFs4gUh5YilS2sF-/view?usp=drive_link'} className="hover:text-violet-600 underline">get my resume here</Link>
+                <Link href={'https://github.com/achxu-28'} className="hover:text-violet-600 underline">Github</Link>
               </div>
 
               <div className="size-[2rem] absolute right-6 top-6 text-black hover:text-gray-600">
