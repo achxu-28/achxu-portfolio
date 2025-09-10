@@ -30,7 +30,7 @@ const Skills = () => {
           initial={{ opacity: 0, scale:0.8 }}
                 whileInView={{ opacity: 1, scale:1 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="px-2 lg:px-3 lg:scale-115 bg-white border-1 rounded-[20px]" key={i}>
+          className="px-2 lg:px-3 lg:scale-115 bg-white border-1 rounded-[20px] cursor-pointer" key={i}>
             {items}
           </motion.p>
         ))}
