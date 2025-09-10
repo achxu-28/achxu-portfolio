@@ -9,16 +9,16 @@ import Skills from "./components/Skills";
 import Head from "next/head";
 
 <Head>
-  <link rel="canonical" href="https://yourdomain.com" />
+  <link rel="canonical" href="https://achxu-portfolio.vercel.app/" />
   <script type="application/ld+json">
     {JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
       name: "Akash Mamenholy",
-      url: "https://yourdomain.com",
+      url: "https://achxu-portfolio.vercel.app/",
       sameAs: [
         "https://github.com/achxu",
-        "https://linkedin.com/in/yourprofile",
+        "https://www.linkedin.com/in/akash-mamenholy-275b37353",
       ],
       jobTitle: "Frontend Developer",
     })}
