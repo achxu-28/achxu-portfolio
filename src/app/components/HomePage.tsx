@@ -64,7 +64,7 @@ const HomePage = () => {
     className={`${isLight ? "text-[#0e0e0e]" : "text-white"} `} id="home">
       {/* home page  */}
       <motion.div
-      style={{scale}} className="flex bg-transparent flex-col lg:flex-row h-[100vh] lg:h-[100vh] justify-between sticky top-17">
+      style={{scale}} className="flex bg-transparent flex-col lg:flex-row h-[90vh] lg:h-[100vh] justify-between sticky top-8">
         <motion.div
         initial={{ opacity: 0, y:100 }}
                 whileInView={{ opacity: 1, y:0 }}
