@@ -33,7 +33,7 @@ import Head from "next/head";
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col relative top-15 font-inter ">
+      <div className="flex flex-col relative  font-inter ">
         
       {/* <Header/> */}
       {/* <Checkered/> */}
