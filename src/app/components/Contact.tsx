@@ -1,54 +1,64 @@
-"use client"
-import React from 'react'
-import  {motion, useScroll, useTransform} from "motion/react"; 
-import Link from 'next/link';
+// src/components/Contact.tsx
+"use client";
 
+import React from "react";
+import Link from "next/link";
+import { useTheme } from "../../context/ThemeContext";
 
 const Contact = () => {
-    const {scrollY} = useScroll()
+  const { isLight } = useTheme();
 
-    const y = useTransform(scrollY, [2000,2500], [-1000,200])
   return (
-    <div className='h-[90vh] relative' id='contact'>
-
-      <div className='flex flex-col md:flex-row md:justify-end '>
-          <div className='relative pt-40 pb-20 flex px-4 w-full md:justify-end'>
-            <div className='absolute top-20 lg:top-38 left-4'>
-                <h3 className='font-inter-semibold lg:text-[20px]'>{'[CONTACT]'}</h3>
-            </div>
-            <div className='flex flex-col pr-20'>
-                <Link href={'mailto:akashmamenholy@gmail.com'}>EMAIL</Link>
-                <Link href={'https://wa.me/8301917778'}>WHATSAPP</Link>
-            </div>
-            <div className='flex flex-col pr-20'>
-                <Link href={'https://www.instagram.com/achxu_/'}>INSTAGRAM</Link>
-                <Link href={'https://www.linkedin.com/in/akash-mamenholy-275b37353'}>LINKEDIN</Link>
-                <Link href={'https://github.com/achxu-28'}>GITHUB</Link>
-                <Link href={'https://drive.google.com/file/d/1oz2abTUjmLYSN9YLkFs4gUh5YilS2sF-/view?usp=drive_link'}>RESUME</Link>
-            </div>
+    <div
+      id="contact"
+      className={`h-full relative ${
+        isLight ? "bg-white text-black" : "bg-black text-white placeholder:text-gray-200"
+      }`}
+    >
+      <div className="flex flex-col md:flex-row md:justify-end">
+        <div className="relative pt-40 pb-20 flex px-4 w-full md:justify-end">
+          <div className="absolute top-20 lg:top-38 left-4">
+            <h3 className="font-inter-semibold lg:text-[20px]">
+              {"[CONTACT]"}
+            </h3>
           </div>
-    
-          <form action="" className='px-4 md:px-0 md:pr-4 flex gap-1 h-fit  md:pt-40'>
-            <input type="text" name="" placeholder='leave a message...' id="" className='
-            border-1 px-2' />
-            <button className='text-[white] bg-black px-2 py-2'>send</button>
-          </form>
+          <div className="flex flex-col pr-20">
+            <Link href="mailto:akashmamenholy@gmail.com">EMAIL</Link>
+            <Link href="https://wa.me/8301917778">WHATSAPP</Link>
+          </div>
+          <div className="flex flex-col pr-20">
+            <Link href="https://www.instagram.com/achxu_/">INSTAGRAM</Link>
+            <Link href="https://www.linkedin.com/in/akash-mamenholy-275b37353">
+              LINKEDIN
+            </Link>
+            <Link href="https://github.com/achxu-28">GITHUB</Link>
+            <Link href="https://drive.google.com/file/d/1oz2abTUjmLYSN9YLkFs4gUh5YilS2sF-/view?usp=drive_link">
+              RESUME
+            </Link>
+          </div>
+        </div>
+
+        <form action="" className="px-4 md:px-0 md:pr-4 flex gap-1 h-fit md:pt-40">
+          <input
+            type="text"
+            placeholder="leave a message..."
+            className="border-1 px-2 placeholder:text-gray-400"
+          />
+          <button className={`  px-2 py-2 ${isLight? "bg-black text-white": "bg-white text-black"}`}>send</button>
+        </form>
       </div>
 
-      
+      <div  className="px-4">
+        <h2 className="text-[90px] md:text-[120px] lg:text-[180px] text-center sticky bottom-0">
+          ACHXU
+        </h2>
+      </div>
 
-      <motion.div 
-      style={{y}}
-      className='px-4 '>
-        <h2 className='text-[90px] md:text-[120px] lg:text-[180px] text-center sticky bottom-0'>ACHXU</h2>
-      </motion.div>
-
-      <div className='pt-20 px-4'>
+      <div className="pt-20 px-4">
         <p>@2025</p>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -27,10 +27,13 @@ import Head from "next/head";
 
 
 
+
+
+
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col relative top-17 font-inter">
+      <div className="flex flex-col relative  font-inter ">
         
       {/* <Header/> */}
       {/* <Checkered/> */}
@@ -42,6 +45,7 @@ export default function Home() {
       <Contact/>
       {/* <WorkSection/> */}
        
+       {/* <RockPaperScissorsPage/> */}
       </div>
     </>
   );

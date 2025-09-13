@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import myPic from "../../../public/images/me.jpg";
 import React from "react";
@@ -8,9 +9,15 @@ import GitIcon from "../icons/GitIcon";
 import * as motion from "motion/react-client"; 
 import Link from "next/link";
 
+import { useTheme } from "@/context/ThemeContext";
+
+
 const About = () => {
+
+    const { isLight } = useTheme();
+  
   return (
-    <div className="lg:h-[100vh] flex" id="about">
+    <div className={`lg:h-[100vh] flex ${isLight? "bg-white text-black" : "bg-black text-white"}`} id="about">
         {/* image side */}
         <motion.div 
         initial={{ opacity: 0, x:-200 }}
@@ -93,14 +100,14 @@ const About = () => {
                 </motion.div>
         
                  <div className="flex  gap-[2px] text-[20px]">
-                        <Link href={"mailto:akashmamenholy@gmail.com"} className=" flex  gap-[2px]">
-                          <button className="text-gray-100  bg-gray-950 pl-2 pr-6 py-2">
-                            connect with me
-                          </button>
-                          <button className="text-gray-100  bg-gray-950 pl-3 pr-3 py-2">
-                            {"->"}
-                          </button>
-                        </Link>
+                        <Link href={"mailto:akashmamenholy@gmail.com"} className="flex  gap-[2px] text-[20px]">
+                  <button className={`  pl-2 pr-6 py-2 ${isLight?  "bg-gray-950 text-gray-100": "bg-gray-50 text-gray-950"}`}>
+                    connect with me
+                  </button>
+                  <button className={` pl-3 pr-3 py-2 ${isLight?  "bg-gray-950 text-gray-100": "bg-gray-50 text-gray-950"}`}>
+                    {"->"}
+                  </button>
+                </Link>
                 </div>
             </div>
         </div>

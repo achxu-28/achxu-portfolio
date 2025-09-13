@@ -7,6 +7,8 @@ import Mentogram from "../../../public/images/mentogram.jpg";
 import Optics from "../../../public/images/emraitesOpticals.jpg";
 
 import { motion, useTransform } from "motion/react";
+import { useTheme } from "@/context/ThemeContext";
+
 
 const projects = [
   {
@@ -45,19 +47,24 @@ import { useScroll } from "motion/react";
 
 const HomePage = () => {
   const { scrollY } = useScroll();
+  const { isLight } = useTheme();
 
   const scale = useTransform(scrollY, [0, 400], [1,0.9] );
 
-  const background = useTransform(scrollY, [0, 400], ["#ffffff", "#afadad"]);
+  const dynamicBg = useTransform(scrollY, [0, 400], ["#ffffff", "#afadad"]);
+  const dynamicBg2 = useTransform(scrollY, [0, 400], ["#000000","#0e0e0e"]);
+
+    // choose background: dynamic when light, solid black when dark
+  const bgStyle = isLight ? dynamicBg : dynamicBg2;
 
   // console.table(projects);
   return (
     <motion.div
-    style={{background}}
-    className="bg-[#fff]" id="home">
+    style={{background: bgStyle}}
+    className={`${isLight ? "text-[#0e0e0e]" : "text-white"} `} id="home">
       {/* home page  */}
       <motion.div
-      style={{scale}} className="flex bg-transparent flex-col lg:flex-row h-[90vh] lg:h-[100vh] justify-between sticky top-17">
+      style={{scale}} className="flex bg-transparent flex-col lg:flex-row h-[100vh] lg:h-[100vh] justify-between sticky top-17">
         <motion.div
         initial={{ opacity: 0, y:100 }}
                 whileInView={{ opacity: 1, y:0 }}
@@ -94,10 +101,10 @@ const HomePage = () => {
               </div>
 
                 <Link href={"mailto:akashmamenholy@gmail.com"} className="flex  gap-[2px] text-[20px]">
-                  <button className="text-gray-100  bg-gray-950 pl-2 pr-6 py-2">
+                  <button className={`  pl-2 pr-6 py-2 ${isLight?  "bg-gray-950 text-gray-100": "bg-gray-50 text-gray-950"}`}>
                     connect with me
                   </button>
-                  <button className="text-gray-100  bg-gray-950 pl-3 pr-3 py-2">
+                  <button className={` pl-3 pr-3 py-2 ${isLight?  "bg-gray-950 text-gray-100": "bg-gray-50 text-gray-950"}`}>
                     {"->"}
                   </button>
                 </Link>
@@ -108,7 +115,9 @@ const HomePage = () => {
       </motion.div>
 
       {/* work section  */}
-      <div className=" sticky top-17 bg-white" id="work">
+      <div className={`sticky top-17 ${
+          isLight ? "bg-white text-black" : "bg-black text-white"
+        }`} id="work">
         <div className=" px-4  py-20 lg:pt-40 gap-2 flex relative">
           <div className="  w-fit h-fit absolute top-22 lg:top-45">
             <h2 className="text-[16px] lg:text-[20px] font-inter-semibold ">
@@ -128,7 +137,7 @@ const HomePage = () => {
         <div className="relative grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mx-4 lg:mx-5 border-t border-dashed border-gray-300 py-10 gap-5">
           {/* projects */}
           <div className="absolute flex justify-center -top-3 w-full">
-            <p className=" px-2 rounded-[20px] bg-gray-300">TAP FOR REPOS</p>
+            <p className=" px-2 rounded-[20px] bg-gray-300 text-black">TAP FOR REPOS</p>
           </div>
 
           {projects.map((items, i) => (
@@ -147,7 +156,7 @@ const HomePage = () => {
                   className="object-cover h-full hover:scale-110 transition-transform duration-200"
                 />
                 <div className="absolute flex px-2 flex-wrap gap-3 bottom-2 w-full">
-                  <p className="bg-gray-100/80 border-1 border-gray-500 px-2 rounded-[20px]">
+                  <p className="bg-gray-100/80 border-1 border-gray-500 px-2 rounded-[20px] text-black">
                     {items.techStack}
                   </p>
                 </div>

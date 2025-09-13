@@ -29,6 +29,9 @@
   --font-inter-semibold: Inter-semibold, sans-serif;
 
 }
+body, div {
+  transition: background-color 0.3s, color 0.3s;
+}
 
 
 
